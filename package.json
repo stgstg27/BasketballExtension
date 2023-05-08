@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "nba-api-client": "^1.1.2"
+  }
+}
