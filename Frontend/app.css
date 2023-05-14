@@ -1,0 +1,123 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;}
+html {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+body > div {
+    width: 100%;
+    margin: 0 5%;
+  }
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 400;}
+
+a {
+  text-decoration: none;
+  color: #4B87B0;}
+a:hover {
+  color: #35607e;}
+
+.big_number {
+  font-weight: 300;
+  font-size: 18px;
+  color: #333;
+  line-height: 30px;
+  text-align: left;
+  vertical-align:middle;
+}
+
+/* table style */
+
+table {
+  font-weight: 400;
+  border-collapse: collapse;
+  border: 0.5px solid #eee;
+}
+td, th {
+  text-align: right;
+  vertical-align: middle;
+  padding: .45rem .5rem;
+  color: #333;}
+thead th {
+  vertical-align: bottom;
+  color: #FFF;
+  background-color: #31689B;}
+td {
+  border-right: 1px solid #eee;}
+tbody th.section {
+  background-color: #bbb;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .75rem;}
+
+tr:nth-child(even){
+  background-color: rgba(0,0,0,.03);}
+
+/* data format styles */
+
+.text {
+  text-align: left;}
+.number {
+  text-align: right;}
+.center {
+  text-align: center;}
+.small {
+  font-size: .75rem;}
+
+/* cell styling */
+
+.warning, .error {
+  font-weight: 500;}
+.ok {}
+.warning {
+  background-color: rgba(251, 174, 86, .25);
+  color: #ED8003;
+}
+.error {
+  background-color: rgba(201, 47, 37, .15);
+  color: #9E2216;
+}
+
+/* specific styles */
+thead tr:nth-child(1) th:nth-child(1),
+thead tr:nth-child(1) th:nth-child(2),
+thead tr:nth-child(1) th:nth-child(3),
+thead tr:nth-child(2) th:nth-child(8),
+thead tr:nth-child(2) th:nth-child(12),
+tbody th:nth-child(1),
+tbody td:nth-child(9),
+tbody td:nth-child(13) {
+  border-right: 1px solid #ccc;}
+
+
+/* make all PSMs the same width */
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6),
+td:nth-child(7),
+td:nth-child(8),
+td:nth-child(9) {
+  width: 2.5rem;}
+
+tbody td:nth-child(2):after,
+tbody td:nth-child(3):after,
+tbody td:nth-child(4):after,
+tbody td:nth-child(5):after,
+tbody td:nth-child(6):after,
+tbody td:nth-child(7):after,
+tbody td:nth-child(8):after,
+tbody td:nth-child(9):after,
+tbody td:nth-child(12):after {
+    xcolor: rgba(0, 0, 0, .3);
+    xpadding-left: 0.1rem;
+    xcontent: "\00025";}

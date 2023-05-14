@@ -1,0 +1,259 @@
+<html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script type="module" src="popup.js"></script>
+	<title>Table Example</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./../backend.js"></script>
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	<script  type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<h1>Estate | Preparation &amp; Production Scorecard</h1>
+		<div class="big_number"><font color="#9E2216"><b>◼</b></font>&lt;90%&nbsp;&nbsp;      <font color="#ED8003"><b>◼</b></font>90%-100%&nbsp;&nbsp;      <font color="#000"><b>◼</b></font>≥100%</div>
+		<table id="scorecard">
+			<thead>
+				<tr><th rowspan="2" class="text">Metric</th><th colspan="8" class="text">PSM Achievement (&percnt;)</th><th colspan="4" class="text">Total</th><th rowspan="2" class="text">Actions</th></tr>
+				<tr><th>1</th><th>2</th><th>3</th><th>5</th><th>6</th><th>6A</th><th>7</th><th>P</th><th>Actual</th><th>Budget</th><th>Achievement (&percnt;)</th><th>YoY (&percnt;)</th></tr>
+			</thead>
+			<tbody>
+				<tr><th colspan="14" class="text section">Preparation</th></tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/530879260" target="_top">Mature Area</a></th>
+					<td class="number">103</td>
+					<td>102</td>
+					<td>100</td>
+					<td>101</td>
+					<td>100</td>
+					<td>101</td>
+					<td>106</td>
+					<td>100</td>
+					<td>480,718</td>
+					<td>475,509</td>
+					<td>101.10</td>
+					<td>1.4</td>
+					<td class="center"><a href="https://sinarmas-agri-business.domo.com/page/-100000/kpis/details/164584969" target="_top">1</a></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/530879260" target="_top">Land Preparation</a></th>
+					<td class="number">35</td>
+					<td>12</td>
+					<td>45</td>
+					<td>75</td>
+					<td> </td>
+					<td> </td>
+					<td>34</td>
+					<td> </td>
+					<td>6,031</td>
+					<td>12,423</td>
+					<td>48.55</td>
+					<td>-19</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/530879260" target="_top">Planting</a></th>
+					<td class="number">34</td>
+					<td>17</td>
+					<td>25</td>
+					<td>76</td>
+					<td> </td>
+					<td> </td>
+					<td>67</td>
+					<td> </td>
+					<td>3,816</td>
+					<td>8,514</td>
+					<td>44.82</td>
+					<td>-19</td>
+					<td class="center"> </td>
+				</tr>
+				<tr><th colspan="14" class="text section">Harvesting</th></tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/425216493" target="_top">FFB Production</a></th>
+					<td class="number">76</td>
+					<td>97</td>
+					<td>98</td>
+					<td>93</td>
+					<td>104</td>
+					<td>104</td>
+					<td>96</td>
+					<td>72</td>
+					<td>7,367,920</td>
+					<td>7,777,561</td>
+					<td>94.73</td>
+					<td>27</td>
+					<td class="center"><a href="https://sinarmas-agri-business.domo.com/page/1927038327/kpis/details/454676674" target="_top">1</a></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/425216493" target="_top">Yield Per Ha</a></th>
+					<td class="number"> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td>15.33</td>
+					<td>16.41</td>
+					<td>93.42</td>
+					<td>26</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th colspan="14" class="text section">Milling</th></tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">FFB Processed</a></th>
+					<td class="number">75</td>
+					<td>99</td>
+					<td>100</td>
+					<td>89</td>
+					<td>101</td>
+					<td>114</td>
+					<td>113</td>
+					<td>80</td>
+					<td>8,116,560</td>
+					<td>8,447,964</td>
+					<td>96.08</td>
+					<td>26</td>
+					<td class="center"><a href="https://sinarmas-agri-business.domo.com/page/1927038327/kpis/details/454676674" target="_top">1</a></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">CPO Produced</a></th>
+					<td class="number">71</td>
+					<td>95</td>
+					<td>93</td>
+					<td>84</td>
+					<td>97</td>
+					<td>112</td>
+					<td>112</td>
+					<td>80</td>
+					<td>1,806,958</td>
+					<td>1,951,324</td>
+					<td>92.60</td>
+					<td>26</td>
+					<td class="center"><a href="https://sinarmas-agri-business.domo.com/page/1927038327/kpis/details/454676674" target="_top">1</a></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">PK Produced</a></th>
+					<td class="number">74</td>
+					<td>102</td>
+					<td>96</td>
+					<td>87</td>
+					<td>98</td>
+					<td>113</td>
+					<td>119</td>
+					<td>79</td>
+					<td>445,627</td>
+					<td>466,748</td>
+					<td>95.47</td>
+					<td>29</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">OER (&percnt;)</a></th>
+					<td class="number">94</td>
+					<td>96</td>
+					<td>93</td>
+					<td>95</td>
+					<td>96</td>
+					<td>98</td>
+					<td>98</td>
+					<td>99</td>
+					<td>22.26</td>
+					<td>23.1</td>
+					<td>96.36</td>
+					<td>0.07</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">KER (&percnt;)</a></th>
+					<td class="number">99</td>
+					<td>103</td>
+					<td>96</td>
+					<td>99</td>
+					<td>97</td>
+					<td>100</td>
+					<td>105</td>
+					<td>99</td>
+					<td>5.49</td>
+					<td>5.52</td>
+					<td>99.46</td>
+					<td>0.12</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th colspan="14" class="text section">Kernel Crushing</th></tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">PK Processed</a></th>
+					<td class="number">67</td>
+					<td> </td>
+					<td> </td>
+					<td>87</td>
+					<td>79</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td>176,082</td>
+					<td>221,787</td>
+					<td>79.39</td>
+					<td>39</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">PKO</a></th>
+					<td class="number">67</td>
+					<td> </td>
+					<td> </td>
+					<td>86</td>
+					<td>77</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td>76,725</td>
+					<td>98,053</td>
+					<td>78.25</td>
+					<td>38</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">PKM</a></th>
+					<td class="number">68</td>
+					<td> </td>
+					<td> </td>
+					<td>88</td>
+					<td>78</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td>92,558</td>
+					<td>116,410</td>
+					<td>79.51</td>
+					<td>38</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">PKO ER (&percnt;)</a></th>
+					<td class="number">100</td>
+					<td> </td>
+					<td> </td>
+					<td>100</td>
+					<td>97</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td>43.57</td>
+					<td>44.21</td>
+					<td>98.55</td>
+					<td>-0.3</td>
+					<td class="center"></td>
+				</tr>
+				<tr><th class="text"><a href="https://sinarmas-agri-business.domo.com/page/420328915" target="_top">PKM ER (&percnt;)</a></th>
+					<td class="number">101</td>
+					<td> </td>
+					<td> </td>
+					<td>101</td>
+					<td>99</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td>52.56</td>
+					<td>52.49</td>
+					<td>100.13</td>
+					<td>-0.7</td>
+					<td class="center"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

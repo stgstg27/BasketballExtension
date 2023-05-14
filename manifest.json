@@ -1,6 +1,10 @@
 {
-  "name": "Basketball Chrome Extension",
+  "name": "Basketball Chrome Extension - 2",
   "version": "1.0",
   "description": "Build an Extension!",
-  "manifest_version": 2
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "Frontend/index.html",
+    "default_icon" : "icon.png"
+  }
 }
