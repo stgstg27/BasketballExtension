@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Almanac",
+    "description": "Game time ready for score, analytics and a lot more",
+    "version": "1.0.0",
+    "action" : {
+        "default_popup": "popup.html",
+        "default_title": "React Boilerplate",
+        "default_icon" : "logo-color.png"
+    },
+    "permissions": [
+        "bookmarks"
+    ],
+    "icons": {
+        "16" : "logo-color.png",
+        "48" : "logo-color.png",
+        "128" : "logo-color.png"
+    },
+    "options_page": "options.html",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
