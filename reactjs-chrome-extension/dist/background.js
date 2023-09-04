@@ -1,1 +1,20 @@
-chrome.runtime.onMessage.addListener(((e,o,t)=>{console.log(e),console.log(o),t("Front the background Script")})),chrome.action.onClicked.addListener((e=>{chrome.scripting.executeScript({target:{tabId:e.id},files:["content.js"]})}));
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**************************************!*\
+  !*** ./src/background/background.ts ***!
+  \**************************************/
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    console.log(msg);
+    console.log(sender);
+    sendResponse("Front the background Script");
+});
+chrome.action.onClicked.addListener((tab) => {
+    chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ['content.js']
+    });
+});
+
+/******/ })()
+;
+//# sourceMappingURL=background.js.map

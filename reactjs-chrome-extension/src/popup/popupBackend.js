@@ -42,6 +42,21 @@ export class Game{
   }
 }
 
+const twoLength = (str) => {
+  if(str.length == 1)
+    return "0"+str
+  else
+    return str;
+}
+
+export const convertDateToString = (date) => {
+  const year = date.getUTCFullYear()
+  const numOfmonth = date.getMonth() + 1
+  const month = twoLength(numOfmonth.toString())
+  const currentDate = twoLength(date.getDate())  
+  return year + "-" + month + "-" + currentDate
+}
+
   function createTeam(gameData, matchStatus) {
     if(matchStatus == "AWAY") {
       return new Team(gameData.awayTeam.teamID, gameData.awayTeam.teamName, 
@@ -78,6 +93,11 @@ export class Game{
   }
   
   export async function getGameDetails(date) {
+    console.log("Trying to get games for the date: " +  date)
+
+    if(date == undefined){
+      date = convertDateToString(new Date())
+    }
     var apiEndpoint = "https://proxy.boxscores.site/?apiUrl=stats.nba.com/stats/scoreboardv3&GameDate=" + date + "&LeagueID=00"
     const response = await fetch(apiEndpoint);
     const jsonData = await response.json();

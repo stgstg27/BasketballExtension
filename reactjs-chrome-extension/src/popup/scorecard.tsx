@@ -6,11 +6,11 @@ let game = {
     logoURL: "https://a1.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/scoreboard/bos.png&h=70&w=70"
   },
 }
-import React, { useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { getGameDetails, Game, Team } from './popupBackend.js'
 
-export function Scorecard({gameT}){
+export function Scorecard({gameT, anyGame}){
   // Setting State for the Away Team 
   const [gameId, setGameId] = useState('');
   const [awayTeamlogoURL, setAwayTeamlogoURL] = useState('');
@@ -28,23 +28,30 @@ export function Scorecard({gameT}){
   const [homeTeamWins, setHomeTeamWins] = useState(0)
   const [homeTeamScorePerQuarter, setHomeTeamScorePerQuarter] = useState([])
 
-  const gameToConsider = gameT.then((ret) => {
-    setGameId(ret.gameId)
-    setAwayTeamlogoURL(ret.awayTeam.logoURL)
-    setAwayTeamLoss(ret.awayTeam.losses)
-    setAwayTeamCity(ret.awayTeam.teamCity)
-    setAwayTeamScore(ret.awayTeamScore)
-    setAwayTeamWins(ret.awayTeam.wins)
-    setAwayTeamScorePerQuarter(ret.awayTeamScorePerQuarter)
+  console.log(anyGame)
+  if(anyGame == false){
+    return (
+      <p> There is no game today </p>
+    );
+  }
+  
+  console.log(gameT)   
+  useEffect(()=>{                                              
+    setGameId(gameT.gameId)
+    setAwayTeamlogoURL(gameT.awayTeam.logoURL)
+    setAwayTeamLoss(gameT.awayTeam.losses)
+    setAwayTeamCity(gameT.awayTeam.teamCity)
+    setAwayTeamScore(gameT.awayTeamScore)
+    setAwayTeamWins(gameT.awayTeam.wins)
+    setAwayTeamScorePerQuarter(gameT.awayTeamScorePerQuarter)
 
-    setHomeTeamlogoURL(ret.homeTeam.logoURL)
-    setHomeTeamLoss(ret.homeTeam.losses)
-    setHomeTeamCity(ret.homeTeam.teamCity)
-    setHomeTeamScore(ret.homeTeamScore)
-    setHomeTeamWins(ret.homeTeam.wins)
-    setHomeTeamScorePerQuarter(ret.homeTeamScorePerQuarter)
-    return ret;
-  })
+    setHomeTeamlogoURL(gameT.homeTeam.logoURL)
+    setHomeTeamLoss(gameT.homeTeam.losses)
+    setHomeTeamCity(gameT.homeTeam.teamCity)
+    setHomeTeamScore(gameT.homeTeamScore)
+    setHomeTeamWins(gameT.homeTeam.wins)
+    setHomeTeamScorePerQuarter(gameT.homeTeamScorePerQuarter)
+  })            
 
 let scoreBoard = (
   <div className="mx-auto my-2 max-w-md rounded overflow-hidden shadow-md text-xs">
